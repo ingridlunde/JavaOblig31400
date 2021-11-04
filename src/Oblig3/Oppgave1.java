@@ -15,79 +15,98 @@ i en meldingsboks, tallene i arrayet, samt resultatet av beregningene som er bes
 
 import javax.swing.*;
 import java.lang.Math;
+import java.util.Arrays;
+import java.util.Collections;
 
 class UnikeTall {
 
-private int[] array1;
+    private int[] array1;
+    private int sum = 0;
+    private double gjennomsnitt = 0;
 
     //Metode for å sette lengden på array   - Konstruktør som mottar lengden fra main
     //konstruktør som skal gi startverdi til lengden på array
-        /* Konstruktør som mottar arrayets lengde som parameter og
+     /* Konstruktør som mottar arrayets lengde som parameter og
          oppretter arrayet.  */
 
 
-    public UnikeTall (int lengde) {
-        array1 = new int [lengde];
+    public UnikeTall(int lengde) {
+        array1 = new int[lengde];
+    }
+
+    // Metode som fyller arrayet med tilfeldige tall
+    // Deklarasjon av array for lagring av tilfeldige heltall
+    // Generator for å generere tilfeldige nummer
+
+    public void fyllArray() {
+
+        array1:
+
+        for (int i = 0; i < array1.length; i++) {
+            int nyttTall = (int) (Math.random() * (900) + 100);
+            array1[i] = nyttTall;
+        }
     }
 
     // Metode som skal undersøke om et gitt tall finnes i arrayet fra før. Tallet det letes etter skal mottas som parameter.
     // Metoden skal returnere true hvis talllet finnes i arrayet fra før.
-
     // legg inn genererte tall og sjekk om de er true false - bruke dette i main Sett Tilfeldige tall metoden
 
-    /* private settUlikeTall (int TilfeldigeTall) {
+    private settUlikeTall(int nyttTall) {
         boolean test = false;
-    if ( TilfeldigeTall () == array1[]) {
-        test = true;
-        break;
+        if (nyttTall == array1[i]){
+            test = true;
         }
-        //Gi tilbake ingenting
-
-        else ( TilfeldigeTall(); != array1)   {
+        else {
             test = false;
         }
-        //Send tallet tilbake i array
     }
 
-     */
+  // Metode som finner og returnerer det minste tallet i arrayet.
 
-
-   // Metode som fyller arrayet med tilfeldige tall
-  // Deklarasjon av array for lagring av tilfeldige heltall
-
-
-
-
-
-       public void fyllArray () {
-        // Generator for å generere tilfeldige nummer
-
-    for (int i = 0; i < array1.length; i++)  {
-        int nyttTall = (int) (Math.random() * (900) + 100);
-        array1 [i] = nyttTall;
+     private finnMinsteTallet () {
+        for (Integer i = 0; i < array1[0]; ) {
+            i = array1[0];
+            String ut = "Det minste tallet i arrayet er : " + array1[0];
+            System.out.println("\n" + ut);
         }
-
-        
     }
 
-    public void arrayUtskrift () {
-           for (UnikeTall : array1 ) {
-             //if i mod 10 == 1 println;
-             //JOptionPane.showMessageDialog(null, utArray);
-           }
-          String utArray = (array1 + "\n" );
-          //if i mod 10 == 1 println
+     // Metode som finner og returnerer det største tallet i arrayet.
 
+     private finnStørsteTallet () {
+         Arrays.sort(array1, Collections.reverseOrder());
+         for (int j = 0; j < array1[0]; ) {
+             j = array1[0];
+             String ut = "Det største tallet i arrayet er : " + array1[0];
+             System.out.println("\n" + ut);
+         }
+     }
+
+    /*  Metode som beregner og returnerer den gjennomstnittlige verdien
+    (double-verdi) av tallene i arrayet.  */
+
+    private finnGjennomsnitt() {
+
+        for ( i = 0; i < array1.length ; i++ ){
+            sum += array1[i];
+        }
     }
+
+    private utregningGjennomsnitt ()  {
+        double gjennomsnitt = (double) sum / (double) array1.length;
 }
 
-
-
-
-
-
-
-
+    public void arrayUtskrift() {
+    for (UnikeTall:
+         array1) {
+        //if i mod 10 == 1 println;
+        //JOptionPane.showMessageDialog(null, utArray);
+    }
+    String utArray = (array1 + "\n");
+    //if i mod 10 == 1 println
+    }
+}
 
  class Oppgave1 {
      public static void main(String[] args) {
@@ -99,31 +118,6 @@ private int[] array1;
 
      }
  }
-
-// Metode som finner og returnerer det minste tallet i arrayet.
-
-/* finnMinsteTall () {
-    array1 =
-      if (i = 0); i < array1.lenght, i++)
-     if i < j
-             new number 
-
- }
-
- */
-
-
-
-
-
- // Metode som finner og returnerer det største tallet i arrayet.
-
-
-
-
-/*  Metode som beregner og returnerer den gjennomstnittlige verdien
-  (double-verdi) av tallene i arrayet.  */
-
 
 
 
